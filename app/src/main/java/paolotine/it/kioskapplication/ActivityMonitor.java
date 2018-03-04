@@ -42,7 +42,7 @@ public class ActivityMonitor extends Service {
             @Override
             public void run() {
                 do {
-                    handleKioskMode();
+                    checkKioskMode();
                     try {
                         Thread.sleep(INTERVAL);
                     } catch (InterruptedException e) {
@@ -57,7 +57,7 @@ public class ActivityMonitor extends Service {
         return Service.START_NOT_STICKY;
     }
 
-    private void handleKioskMode() {
+    private void checkKioskMode() {
 
         Context ctx = getApplicationContext();
 

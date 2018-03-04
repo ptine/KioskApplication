@@ -181,7 +181,7 @@ public class FullscreenActivity extends AppCompatActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if(!hasFocus) {
-            //chiudiamo il dialog di sistema al loro apparire
+            //chiudiamo il dialog di sistema al suo apparire
             Intent systemDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
             sendBroadcast(systemDialog);
         }

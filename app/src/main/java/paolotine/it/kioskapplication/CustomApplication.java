@@ -21,7 +21,7 @@ public class CustomApplication extends Application {
         super.onCreate();
         instance = this;
         registerKioskModePowerButtonReceiver();
-        //startActivityMonitorService();
+        startActivityMonitorService();
     }
 
     private void registerKioskModePowerButtonReceiver() {
