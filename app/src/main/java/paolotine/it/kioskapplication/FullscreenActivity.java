@@ -152,6 +152,7 @@ public class FullscreenActivity extends AppCompatActivity {
 
         startService(new Intent(getApplicationContext(), ActivityMonitor.class));
     }
+
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -240,7 +241,7 @@ public class FullscreenActivity extends AppCompatActivity {
         }
     }
 
-    private void preventStatusBarExpansion() {
+    private void disableStatusBarExpansion() {
 
         WindowManager manager = ((WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE));
 
@@ -256,8 +257,8 @@ public class FullscreenActivity extends AppCompatActivity {
         if (resId > 0) {
             result = getResources().getDimensionPixelSize(resId);
         } else {
-            // Use Fallback size:
-            result = 60; // 60px Fallback
+
+            result = 60;
         }
 
         localLayoutParams.height = result;
