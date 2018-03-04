@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="paolotine.it.kioskapplication">
 
-
-
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -21,6 +18,12 @@
         <uses-permission android:name="android.permission.GET_TASKS"/>
         <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
+        <receiver android:name=".BootCompletedReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

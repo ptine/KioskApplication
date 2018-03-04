@@ -160,7 +160,7 @@ public class FullscreenActivity extends AppCompatActivity {
         // created, to briefly hint to the user that UI controls
         // are available.
         delayedHide(100);
-        //preventStatusBarExpansion();
+        //disableStatusBarExpansion();
     }
 
     @Override
